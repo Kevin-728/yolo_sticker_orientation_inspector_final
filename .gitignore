@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Training runs / large artifacts
+runs/
+*.pt
+
+# Datasets (see data/README.md - not committed by default)
+data/raw_dataset/
+data/split_dataset/
+data/tiled_dataset/
+data/large_object_dataset/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,26 @@
+# dataset.yaml
+# -----------
+# YOLO dataset configuration for the sticker orientation inspection project.
+#
+# Place this file in the same directory as your tiled_dataset/ folder,
+# or update 'path' to its absolute location.
+#
+# tiled_dataset/ is produced by 3_tile_dataset.py using Option A
+# (upsampled sub-tiles: crop_size=320 native px -> net_size=640 fed to YOLO).
+#
+# Class IDs must match yolo_converter.py in the orientation-inspection pipeline:
+#   0 → qrcode
+#   1 → yellow_triangle
+#   2 → green_label   (detected but ignored by the inspection pipeline)
+#   3 → fuse_cover
+
+path: C:\Users\15121\Desktop\yolo_train_v2\tiled_dataset   # root of the tiled dataset; adjust if needed
+train: images/train
+val:   images/val
+
+nc: 4
+names:
+  0: qrcode
+  1: yellow_triangle
+  2: green_label
+  3: fuse_cover

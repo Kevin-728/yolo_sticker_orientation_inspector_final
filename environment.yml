@@ -1,0 +1,33 @@
+# Conda environment for the Sticker Orientation & Presence Inspector.
+#
+# Create with:   conda env create -f environment.yml
+# Activate with: conda activate sticker-yolo
+#
+# NOTE: pytorch-cuda=12.1 assumes an NVIDIA GPU with a compatible driver
+# (developed/tested against an RTX 4070 laptop GPU). For CPU-only or a
+# different CUDA version, adjust or remove the pytorch-cuda line before
+# creating the environment.
+#
+# TODO: once your own working environment is finalized, replace the
+# unpinned pip packages below with exact versions via:
+#   conda env export --no-builds > environment.yml
+
+name: sticker-yolo
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - pip:
+      - ultralytics
+      - opencv-python
+      - pyzbar
+      - zxing-cpp
+      - numpy
